@@ -1,7 +1,7 @@
 function calculateFizzBuzz(iterations) {
   let output = [];
 
-  for (let iteration = 0; iteration < iterations; iteration++) {
+  for (let iteration = 1; iteration <= iterations; iteration++) {
     output.push(calculateIteration(iteration));
   }
 
@@ -9,13 +9,13 @@ function calculateFizzBuzz(iterations) {
 }
 
 function calculateIteration(value) {
-  if (value > 0 && value % 3 == 0 && value % 5 == 0)
+  if (value % 3 == 0 && value % 5 == 0)
     return "fizz buzz";
 
-  if (value > 0 && value % 3 == 0)
+  if (value % 3 == 0)
     return "fizz";
 
-  if (value > 0 && value % 5 == 0)
+  if (value % 5 == 0)
     return "buzz";
 
   return value;
